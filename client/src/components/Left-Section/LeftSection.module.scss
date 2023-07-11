@@ -1,0 +1,35 @@
+@use "../../sass/abstracts" as * ;
+
+
+.section__left_side{
+  width: min(100vw - 5rem, 48rem);
+  margin-top: 7rem;
+
+  & > .section__title{
+    @include bold-text-12;
+    text-transform: capitalize;
+  }
+
+  & > .section__header{
+    @include title-36;
+    text-transform: capitalize;
+    margin-top: 2rem;
+  }
+
+  & > .section__sub_header{
+    @include bold-text-12;
+    margin-top: 2rem;
+  }
+
+  & > .section__quotes{
+    margin-top: 3.5rem;
+    display: grid;
+    row-gap: 1.6rem;
+
+    & > .quote{
+      display: flex;
+      gap: 1.5rem;
+      @include bold-text-12;
+    }
+  }
+}

@@ -1,0 +1,243 @@
+@use "../../sass/abstracts" as * ;
+
+body{
+  overflow-x: hidden;
+}
+
+.header{
+  min-height: 78.2rem;
+  position: relative;
+
+
+  & > .__background{
+    height: 67.2rem;
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    display: grid;
+    grid-template-columns: 45% 1fr;
+
+    & > .__left {
+      background-color: $light-black;
+    }
+
+    & > .__right {
+      background-color: $light-blue;
+      width: 100%;
+      height: inherit;
+      overflow: hidden;
+
+      & > img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: top -1rem;
+      }
+    }
+  }
+
+  & > .__main {
+    position: absolute;
+    height: max-content;
+    width: 100%;
+    bottom: 5rem;
+
+    & > .__title{
+      width: 65rem;
+      color: $white;
+      display: grid;
+      row-gap: 2rem;
+
+      & > h1 {
+        @include header-48
+      }
+
+      & > p {
+        @include sub-header-18-auto
+      }
+    }
+
+    & > .__search {
+      margin-top: 4rem;
+    }
+
+    & > .__tickets {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 6rem;
+    }
+
+  }
+}
+
+.services {
+  margin-top: 4rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  min-height: max-content;
+  padding-bottom: 10rem;
+
+  & > .services__right_side{
+    position: relative;
+
+    & > .front__side{
+      position: absolute;
+      right: 11rem;
+      top: 3.2rem;
+      z-index: 100;
+    }
+
+    & > .front__side, & > .back__side {
+      width: 41.3rem;
+      height: 37.2rem;
+      border-radius: 1.5rem;
+      filter: drop-shadow(0px 0px 13px rgba(0, 0, 0, 0.15));
+      overflow: hidden;
+
+      & > img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+
+.recommendation{
+  margin-top: 5rem;
+  padding-block: 5rem;
+
+  & > .recommendation__body{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.benefits{
+  margin-top: 4rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  min-height: max-content;
+  padding-bottom: 10rem;
+
+  & > div > p:first-child {
+    color: $blue;
+  }
+
+  & > .benefits__right_side{
+    position: relative;
+
+    & > .front__side{
+      width: 51.2rem;
+      height: 43.6rem;
+      position: absolute;
+      right: 3.8rem;
+      top: 4rem;
+      z-index: 100;
+
+      & > img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    & > .back__side{
+      background-color: $blue;
+      width: 36rem;
+      height: 47.6rem;
+    }
+
+    & > .front__side, & > .back__side {
+      border-radius: 1rem;
+      filter: drop-shadow(0px 0px 13px rgba(0, 0, 0, 0.15));
+      overflow: hidden;
+    }
+  }
+
+}
+
+.last_news{
+  margin-top: 4rem;
+  padding-bottom: 5rem;
+
+  & > .grid_temp{
+    display: grid;
+    grid-template-areas:
+            "item_a item_b item_d"
+            "item_a item_c item_d";
+    gap: 1rem;
+
+    & > div{
+      border-radius: 1rem;
+      overflow: hidden;
+
+      & > img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    & > .item__a{
+      grid-area: item_a;
+    }
+
+    & > .item__b{
+      grid-area: item_b;
+    }
+
+    & > .item__c{
+      grid-area: item_c;
+    }
+
+    & > .item__d{
+      grid-area: item_d;
+    }
+  }
+}
+.testimonial{
+  margin-block: 4rem;
+  padding-bottom: 5rem;
+  width: 100%;
+  position: relative;
+  margin-bottom: 24rem;
+
+  & > .backgound_image{
+    width: 100%;
+    height: 40rem;
+    position: relative;
+
+    & > img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    & > .mask{
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(68, 111, 147, 0.85) 0%, rgba(113, 139, 151, 0) 100%);
+      width: 100%;
+      height: 100%;
+      padding: 5.2rem 0 0 5.2rem ;
+
+      & > h1{
+        @include title-36;
+        color: $white;
+        max-width: 44.2rem;
+      }
+    }
+  }
+  & > .testimonials{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    bottom: -5rem;
+    width: 100%;
+  }
+}

@@ -1,0 +1,70 @@
+@mixin semi-bold {
+  font-weight: 600;
+}
+
+@mixin medium {
+  font-weight: 500;
+}
+
+@mixin regular {
+  font-weight: 400;
+}
+
+@mixin header-48 {
+  font-size: 4.8rem;
+  line-height: 5.8rem;
+  @include semi-bold;
+}
+
+@mixin title-36 {
+  font-size: 3.6rem;
+  line-height: 4.4rem;
+  @include semi-bold;
+}
+
+@mixin section-title-28 {
+  font-size: 2.8rem;
+  @include semi-bold;
+  line-height: 3.4rem;
+}
+
+@mixin sub-header-18-auto {
+  font-size: 1.8rem;
+  line-height: 2.2rem;
+  @include medium
+}
+
+@mixin sub-header-18 {
+  @include sub-header-18;
+  line-height: 127.7%;
+  @include regular;
+}
+
+@mixin header-16 {
+  @include semi-bold;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+}
+
+@mixin title-16 {
+  @include header-16;
+  font-weight: 300;
+}
+
+@mixin bold-text-12 {
+  @include semi-bold;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+}
+
+@mixin text-12 {
+  @include bold-text-12;
+  @include regular;
+}
+
+
+@mixin tiny-text-10 {
+  font-size: 1rem;
+  line-height: 1.2rem;
+  @include semi-bold;
+}

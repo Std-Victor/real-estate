@@ -1,0 +1,22 @@
+@use "../../sass/abstracts" as * ;
+
+.container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-block: 5rem;
+
+  & > h1{
+    @include section-title-28;
+  }
+
+  & > a {
+    display: flex;
+    column-gap: 1.5rem;
+
+    span {
+      @include bold-text-12;
+      color: $blue;
+    }
+  }
+}

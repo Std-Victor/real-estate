@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;400;700&family=Poppins:wght@700&display=swap');
+// 'Noto Sans JP'
+
+*, *::before, *::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+html {
+  font-family: 'Inter', sans-serif;
+  font-size: 62.5% !important;
+}
+
+h1, h2, h3 {
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+
+  &:visited , &:active {
+    text-decoration: none;
+  }
+
+}
+
+
+#root {
+  isolation: isolate;
+  display: flex;
+  flex-direction: column;
+}
+
+body, #root {
+  width: 100%;
+  min-height: 100vh;
+}
+body{
+  font-size: 1.6rem !important;
+  max-width: min(calc(100vw - 5rem),128rem);
+  margin-inline: auto;
+}

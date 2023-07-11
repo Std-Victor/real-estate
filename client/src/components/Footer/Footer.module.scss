@@ -1,0 +1,98 @@
+@use "../../sass/abstracts" as * ;
+
+.container {
+  height: 28.2rem;
+  width: 100%;
+  position: relative;
+  margin-top: auto;
+
+  & > .form__body{
+    width: min(100vw - 5rem, 93rem );
+    min-height: 20rem;
+    background-color: $white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 2rem;
+    box-shadow: 0 5px 13px rgba(0, 0, 0, 0.2);
+    border-radius: 1rem;
+
+    position: absolute;
+    top: -10rem;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-inside: auto;
+
+    & > h1 {
+      @include section-title-28;
+    }
+
+    & > .form__control{
+      width: calc(93rem - 28rem);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      & > input {
+        width: 60%;
+        padding: .5rem 1rem;
+        outline: none;
+        height: max-content;
+        border: 0;
+        border-bottom: 2px solid $light-black;
+        @include header-16;
+        background-color: transparent;
+      }
+    }
+
+  }
+
+  & > .background__footer{
+    background-color: $blue;
+    height: 100%;
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+  }
+
+  & > .main__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    padding-bottom: 3rem;
+
+    & > .logo{}
+    & > .footer__content{
+      display: flex;
+      justify-content: space-between;
+      align-items: start;
+      column-gap: 15rem;
+
+      & > .links__container{
+
+        & > h4 {
+          @include sub-header-18-auto;
+          color: $white;
+          font-weight: 600;
+          margin-bottom: 1.5rem;
+        }
+
+        & ul {
+          list-style-type: none;
+          @include bold-text-12;
+          display: grid;
+          row-gap: .8rem ;
+
+          & li  a {
+            color: $white;
+            display: flex;
+            column-gap:.5rem;
+          }
+        }
+      }
+    }
+  }
+}

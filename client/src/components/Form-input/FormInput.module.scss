@@ -1,0 +1,36 @@
+@use "../../sass/abstracts" as * ;
+
+.container{
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  width: 100%;
+
+  & > label {
+    @include header-16;
+    text-transform: capitalize;
+  }
+
+  & > input {
+    @include bold-text-12;
+    border: 0;
+    border-bottom: 1px solid $light-black;
+    padding: 1rem 2rem;
+    outline: none;
+    background-color: $white;
+
+    &:invalid[focused='true'] {
+      border-color: red;
+      border-width: 2px;
+
+      &, &::placeholder{
+        color: red;
+      }
+    }
+
+    &:valid {
+      border-color: green;
+      border-width: 2px;
+    }
+  }
+}

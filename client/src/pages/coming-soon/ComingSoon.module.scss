@@ -1,0 +1,23 @@
+@use "../../sass/abstracts" as *;
+.container {
+  min-height: 60vh;
+  display: grid;
+  place-items: center;
+  position: relative;
+
+  & > p {
+    font-size: 22rem;
+    line-height: 16rem;
+    font-weight: 700;
+    color: $light-black;
+    text-transform: uppercase;
+    font-family: 'Poppins';
+  }
+
+  & > svg {
+    position: absolute;
+    right: 12em;
+    bottom: 2em;
+  }
+
+}

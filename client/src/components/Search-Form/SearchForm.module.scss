@@ -1,0 +1,77 @@
+@use "../../sass/abstracts" as * ;
+
+.form_body{
+  width: max-content;
+}
+
+.from__head{
+  display: flex;
+  border-radius: 1rem 1rem 0 0;
+  overflow: hidden;
+  width: min-content;
+
+  & > button {
+    text-align: center;
+    height: 5rem;
+    width: 6rem;
+    border: 0;
+    @include header-16;
+    cursor: pointer;
+
+    &.active {
+      background-color: $blue;
+      color: $white;
+    }
+  }
+}
+
+.form__body{
+  width: max-content;
+  padding: 3.5rem ;
+  border-radius: 0 1rem 1rem;
+  background-color: $white;
+
+  & > .form_inside{
+    display: flex;
+    column-gap: 3rem;
+    align-items: center;
+
+    & > select {
+      border: 0;
+      height: min-content;
+      width: min-content;
+      outline: none;
+      border-bottom: 1px solid $light-black;
+      padding-block: .5rem;
+      @include header-16;
+      color: $light-black;
+    }
+
+    & > .form__control {
+      display: flex;
+      column-gap: 1rem;
+      align-items: center;
+
+      & > input {
+        @include header-16;
+        border: 0;
+        outline: none;
+        width: 18em;
+      }
+    }
+  }
+}
+
+.form__footer{
+  display: flex;
+  column-gap: 6rem;
+  margin-top: 1.3rem;
+  color: $white;
+  @include tiny-text-10;
+
+  & > .form__control {
+    display: flex;
+    column-gap: .5rem;
+    align-items: center;
+  }
+}

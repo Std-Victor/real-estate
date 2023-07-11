@@ -1,0 +1,13 @@
+.container{
+  width: 650px;
+  height: 600px;
+}
+
+.btn{
+  position: absolute;
+  z-index: 100;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 45px;
+}
